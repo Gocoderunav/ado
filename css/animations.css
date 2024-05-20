@@ -1,0 +1,135 @@
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-tracking {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes grow {
+    0% {
+        scale: 0;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+@keyframes grow-tracking {
+    0% {
+        scale: 0;
+    }
+    50% {
+        scale: 1;
+    }
+}
+
+@keyframes grow-fade-tracking {
+    0% {
+        scale: 0;
+        opacity: 0;
+    }
+    20% {
+        scale: 0;
+        opacity: 0;
+    }
+    50% {
+        scale: 1;
+        opacity: 1
+    }
+}
+
+@keyframes swipe-right {
+    0% {
+        transform: translateX(-100%) skewX(0deg);
+    }
+    100% {
+        transform: translateX(0) skewX(-10deg)
+    }
+}
+
+@keyframes fade-right {
+    0% {
+        transform: translateX(-100%) skewX(0deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) skewX(-10deg);
+        opacity: 1;
+    }
+}
+
+@keyframes reveal-right {
+    0% {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        transform: translateX(-100%) skewX(0deg);
+    }
+    100% {
+        clip-path:  polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes reveal-right-tracking {
+    0% {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        transform: translateX(-100%);
+    }
+    50% {clip-path:  polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        transform: translateX(0);
+    }
+}
+
+@keyframes fly-up-tracking {
+    0% {
+        transform: translatey(400%);
+        opacity: 0%;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@keyframes stretch-tracking {
+    0% {
+        transform: scaleX(0);
+    }
+    50% {
+        transform: scaleX(100%);
+    }
+}
+
+@keyframes meteor {
+    0% {
+        opacity: 1;
+        margin-top: -300px;
+        margin-right: -300px;
+    }
+    12% {
+        opacity: 0;
+    }
+    15% {
+        margin-top: 300px;
+        margin-left: -600px;
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,32 @@
+@font-face {
+    font-family: Sp-light;
+    src: url(../fonts/Sp-light.otf);
+}
+
+@font-face {
+    font-family: Sp;
+    src: url(../fonts/Sp-medium.otf);
+}
+
+@font-face {
+    font-family: Sp;
+    src: url(../fonts/Sp-bold.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Caviar-Dreams;
+    src: url(../fonts/CaviarDreams.ttf);
+}
+
+@font-face {
+    font-family: Caviar-Dreams;
+    src: url(../fonts/Caviar_Dreams_Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Caviar-Dreams;
+    src: url(../fonts/CaviarDreams_Italic.ttf);
+    font-style: italic;
+}

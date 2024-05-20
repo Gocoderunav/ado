@@ -1,0 +1,105 @@
+@import url('animations.css');
+@import url('fonts.css');
+@import url('variables.css');
+
+@property --radial-grad-inner {
+  syntax: '<color>';
+  initial-value: rgba(0, 255, 255, 0.0);
+  inherits: false;
+}
+
+@property --radial-grad-outer {
+  syntax: '<color>';
+  initial-value: rgba(0, 0, 0, 0);
+  inherits: false;
+}
+
+@media only screen and (min-width: 800px) {
+  body {
+    color: var(--font-color);
+    font-family: var(--main-font);
+    background-image: url("../images/background-7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main {
+    margin: 0 auto;
+    max-width: 100vw;
+    overflow-x: visible;
+    height: 100vh;
+  }
+
+  .main::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .container {
+    display: flex;
+    padding: 5vh;
+    flex-direction: column;
+  }
+  
+  .child {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+
+  .sub-header {
+    padding-left: 1vw;
+    color: var(--header-color);
+    font-family: var(--header-font);
+    font-size: 4rem;
+    padding-bottom: 50px;
+    animation-name: reveal-right-tracking;
+    animation-timeline: view(block);
+    animation-timing-function: ease-out;
+    transition: color 1s ease-in;
+  }
+
+  .txt {
+    animation-name: grow-fade-tracking;
+    animation-timeline: view(block);
+    animation-timing-function: ease-out;
+  }
+
+  .image {
+    width: 30vw;
+    animation-name: fly-up-tracking;
+    animation-timeline: view(block);
+    animation-timing-function: ease-out;
+}
+
+  a {
+    color: rgb(0, 207, 207);
+    transition: color 500ms ease-out;
+  }
+
+  a:hover {
+    color: rgb(240, 253, 57);
+  }
+}
+
+.meteor {
+  position: fixed;
+  z-index: -4;
+  height: 1px;
+  transform: rotate(-45deg);
+  background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+}
+
+.meteor:before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 5px;
+  border-radius: 50%;
+  margin-top: -2px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 15px 3px #fff;
+}
