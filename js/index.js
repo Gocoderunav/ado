@@ -17,8 +17,8 @@ function createStars(xDim, yDim) {
         star.style.left = random(0, xDim) + '%';
         star.style.top = random(0, yDim) + '%';
         star.style.opacity = random(0.5, 1);
-        star.style.width = random(1, 2) + 'px';
-        star.style.height = random(1, 2) + 'px';
+        star.style.width = '1px';
+        star.style.height = '1px';
         star.style.backgroundColor = '#ffffff';
         document.body.appendChild(star);
     }
