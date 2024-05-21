@@ -35,7 +35,6 @@ function meteorShower(xDim, yDim) {
         meteor.classList.add("meteor");
         meteor.style.animation = 'meteor ' + random(5, 12) +'s linear infinite';
         document.body.appendChild(meteor);
-
     }
 }
 

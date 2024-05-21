@@ -1,6 +1,7 @@
 @import url('animations.css');
 @import url('fonts.css');
 @import url('variables.css');
+@import url('main.css');
 
 @property --radial-grad-inner {
   syntax: '<color>';
@@ -14,11 +15,13 @@
   inherits: false;
 }
 
-@media only screen and (min-width: 800px) {
+
+@media only screen and (min-width: 960px) {
   body {
     color: var(--font-color);
     font-family: var(--main-font);
-    background-image: url("../images/background-7.jpg");
+    background: black;
+    background-image: url("../images/background-desktop.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -62,27 +65,84 @@
     transition: color 1s ease-in;
   }
 
-  .txt {
-    animation-name: grow-fade-tracking;
-    animation-timeline: view(block);
-    animation-timing-function: ease-out;
-  }
-
   .image {
     width: 30vw;
     animation-name: fly-up-tracking;
     animation-timeline: view(block);
     animation-timing-function: ease-out;
+  }
 }
 
-  a {
-    color: rgb(0, 207, 207);
-    transition: color 500ms ease-out;
+@media only screen and (max-width: 960px) {
+  body {
+    color: var(--font-color);
+    font-family: var(--main-font);
+    background: black;
+    background-image: url("../images/background-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main {
+    margin: 0 auto;
+    max-width: 100vw;
+    overflow-x: visible;
+    height: 100vh;
   }
 
-  a:hover {
-    color: rgb(240, 253, 57);
+  .main::-webkit-scrollbar {
+    display: none;
   }
+  
+  .container {
+    display: flex;
+    padding: 2vw;
+    flex-direction: column;
+  }
+  
+  .child {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+
+  .sub-header {
+    padding-left: 2vw;
+    color: var(--header-color);
+    font-family: var(--header-font);
+    font-size: 4rem;
+    padding-bottom: 50px;
+    animation-name: reveal-right-tracking;
+    animation-timeline: view(block);
+    animation-timing-function: ease-out;
+    transition: color 1s ease-in;
+  }
+
+  .image {
+    width: 80vw;
+    animation-name: fly-up-tracking;
+    animation-timeline: view(block);
+    animation-timing-function: ease-out;
+  }
+}
+
+a {
+  color: rgb(0, 207, 207);
+  transition: color 500ms ease-out;
+}
+
+a:hover {
+  color: rgb(240, 253, 57);
+}
+
+.txt {
+  animation-name: grow-fade-tracking;
+  animation-timeline: view(block);
+  animation-timing-function: ease-out;
 }
 
 .meteor {

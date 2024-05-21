@@ -85,6 +85,16 @@
     }
 }
 
+@keyframes reveal-down {
+    0% {
+        clip-path: polygon(0 100%, 0 100%, 100% 100%, 100% 100%);
+        transform: translateY(-100%);
+    }
+    100% {
+        clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+    }
+}
+
 @keyframes reveal-right-tracking {
     0% {
         clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
